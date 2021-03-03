@@ -4,4 +4,6 @@ WORKDIR /usr/src/app
 
 ADD . .
 
+RUN yarn
+
 CMD ["node", "index.js"]
