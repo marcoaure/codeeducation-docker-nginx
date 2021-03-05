@@ -5,6 +5,8 @@
   "license": "MIT",
   "dependencies": {
     "mysql": "^2.18.1",
-    "mysql-migrations": "^1.0.7"
+    "mysql-migrations": "^1.0.7",
+    "mysql2": "^2.2.5",
+    "random-name": "^0.1.2"
   }
 }

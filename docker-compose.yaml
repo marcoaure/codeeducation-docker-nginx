@@ -4,3 +4,21 @@ services:
   node:
     build:
       context: ./node
+    depends_on:
+      - "db"
+    ports:
+      - "3000:3000"
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "pass"
+      MYSQL_DATABASE: "db"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "pass"
+    ports:
+      - 3306
+    volumes:
+      - ./db:/var/lib/mysql
